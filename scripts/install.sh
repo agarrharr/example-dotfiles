@@ -2,14 +2,8 @@
 
 DOTFILES_PATH="${HOME}/example-dotfiles/dotfiles"
 
-function green_echo {
-  GREEN='\033[0;32m'
-  NC='\033[0m'
-  echo -e "${GREEN}$1${NC}"
-}
-
 function copy_dotfiles {
-  green_echo 'Copying dotfiles'
+  echo 'Copying dotfiles'
 
   mkdir -p ~/.OLD_DOTFILES
 
@@ -25,8 +19,4 @@ function copy_dotfiles {
   done
 }
 
-function install {
-  copy_dotfiles
-}
-
-install
+copy_dotfiles
